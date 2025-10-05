@@ -65,7 +65,7 @@ python src/training/model_baseline.py
 
 # 5) FastAPI demo (requires CICFlowMeter in PATH)
 uvicorn src.inference.app_fastapi:app --reload
-
+```
 ---
 
 ## 🏅 Recognition & Documents
