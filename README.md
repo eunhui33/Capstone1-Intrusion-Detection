@@ -15,12 +15,10 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 ## ⚙️ Tech Stack
 | Category | Tools / Libraries |
 |-----------|------------------|
-| **Language** | Python 3.x |
+| **Language** | Python 3.10 |
 | **AI / ML** | Scikit-learn (MLPClassifier), CatBoost |
-| **Data Processing** | Pandas, NumPy, StandardScaler, SMOTE |
-| **Visualization** | Matplotlib, Seaborn |
-| **Model Persistence** | Joblib |
-| **Backend / Deployment** | FastAPI, Uvicorn |
+**For EDA & Preprocessing**: Python, Pandas, NumPy, Matplotlib, Seaborn  
+**For Modeling/Serving**: scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn
 | **Infrastructure** | CUDA, cuDNN, CICFlowMeter, tcpdump, Wireshark |
 | **Dataset** | CSE-CIC-IDS2018 (Canadian Institute for Cybersecurity) |
 
@@ -47,29 +45,33 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 
 ---
 
-## 🚀 How to Run
-> Note: This repository is for research demonstration purposes.  
-> The dataset (CIC-IDS2018) is not included due to licensing and size restrictions.
+## 🚀 How to Run (Demo)
+> This repository is for research demonstration. The dataset is not included due to size/licensing.  
+> Artifacts (npy) are generated under `./artifacts/` by `model_train.py`.
 
-To reproduce model training (using local CSVs):
 ```bash
-# 1️⃣ Clone the repository
+# 1) Clone
 git clone https://github.com/eunhui33/Capstone1-Intrusion-Detection.git
 cd Capstone1-Intrusion-Detection
 
-# 2️⃣ Install dependencies
+# 2) Install
 pip install -r requirements.txt
 
-# 3️⃣ Train model (requires dataset under /data)
+# 3) Preprocess raw CSVs → save npy (expects CSVs in ./data)
 python src/training/model_train.py
+
+# 4) Baseline training/evaluation (saves images under ./images)
+python src/training/model_baseline.py
+
+# 5) FastAPI demo (requires CICFlowMeter in PATH)
+uvicorn src.inference.app_fastapi:app --reload
 
 ---
 
-🏅 Recognition
-
-Best Undergraduate Research Paper – KCSE 2025
-
-Developed as part of a 4-member capstone team
+## 🏅 Recognition & Documents
+- 🥇 *Best Undergraduate Research Paper — KCSE 2025*  
+  - **[View Certificate (PDF)](paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
+- 📄 Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](paper/KCSE2025_IoT_IDS_Paper_KR.pdf)**
 
 ---
 
@@ -84,8 +86,4 @@ Capstone1-Intrusion-Detection/
 │ │ └── app_fastapi.py # real-time FastAPI backend
 ├── paper/
 │ └── KCSE2025_IoT_IDS.pdf
-├── images/
-│ ├── confusion_matrix.png
-│ ├── training_history.png
-│ └── architecture.png
 └── requirements.txt
