@@ -17,8 +17,8 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 |-----------|------------------|
 | **Language** | Python 3.10 |
 | **AI / ML** | Scikit-learn (MLPClassifier), CatBoost |
-**For EDA & Preprocessing**: Python, Pandas, NumPy, Matplotlib, Seaborn  
-**For Modeling/Serving**: scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn
+|**For EDA & Preprocessing**| Python, Pandas, NumPy, Matplotlib, Seaborn|
+|**For Modeling/Serving**| scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn|
 | **Infrastructure** | CUDA, cuDNN, CICFlowMeter, tcpdump, Wireshark |
 | **Dataset** | CSE-CIC-IDS2018 (Canadian Institute for Cybersecurity) |
 
@@ -70,8 +70,8 @@ uvicorn src.inference.app_fastapi:app --reload
 
 ## 🏅 Recognition & Documents
 - 🥇 *Best Undergraduate Research Paper — KCSE 2025*  
-  - **[View Certificate (PDF)](paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
-- 📄 Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](paper/KCSE2025_IoT_IDS_Paper_KR.pdf)**
+  - **[View Certificate (PDF)](paper\KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
+- 📄 Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](paper\KCSE2025_IoT_IDS_Paper_KR.pdf)**
 
 ---
 
@@ -85,5 +85,7 @@ Capstone1-Intrusion-Detection/
 │ ├── inference/
 │ │ └── app_fastapi.py # real-time FastAPI backend
 ├── paper/
-│ └── KCSE2025_IoT_IDS.pdf
+│   ├── KCSE2025_Best_Undergraduate_Paper_Certificate.pdf
+│   └── KCSE2025_IoT_IDS_Paper_KR.pdf
+├── images/                       # confusion matrix / training curves
 └── requirements.txt
