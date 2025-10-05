@@ -17,8 +17,8 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 |-----------|------------------|
 | **Language** | Python 3.10 |
 | **AI / ML** | Scikit-learn (MLPClassifier), CatBoost |
-|**For EDA & Preprocessing**| Python, Pandas, NumPy, Matplotlib, Seaborn|
-|**For Modeling/Serving**| scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn|
+|**EDA & Preprocessing**| Python, Pandas, NumPy, Matplotlib, Seaborn|
+|**Modeling/Serving**| scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn|
 | **Infrastructure** | CUDA, cuDNN, CICFlowMeter, tcpdump, Wireshark |
 | **Dataset** | CSE-CIC-IDS2018 (Canadian Institute for Cybersecurity) |
 
@@ -35,10 +35,10 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 ---
 
 ## 📊 Results
-| Model | Accuracy | ROC-AUC | MCC |
+| Model | Accuracy | AUC | MCC |
 |--------|-----------|---------|-----|
-| **MLP (my model)** | 93.7% | 0.9714 | 0.91 |
-| CatBoost (team baseline) | 95.8% | 0.9808 | — |
+| **MLP (my model)** | 0.9581 | 0.9714 | 0.8740 |
+| CatBoost (team baseline) | 0.9370 | 0.9808 | 0.8240 |
 
 > ✅ The MLP achieved stable detection performance with minimal false positives,  
 > effectively identifying abnormal IoT traffic patterns in real time.
@@ -70,8 +70,9 @@ uvicorn src.inference.app_fastapi:app --reload
 
 ## 🏅 Recognition & Documents
 - 🥇 *Best Undergraduate Research Paper — KCSE 2025*  
-  - **[View Certificate (PDF)](paper\KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
-- 📄 Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](paper\KCSE2025_IoT_IDS_Paper_KR.pdf)**
+  - **[View Certificate (PDF)](./paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
+- 📄 Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](./paper/KCSE2025_IoT_IDS_Paper_KR.pdf)**
+
 
 ---
 
