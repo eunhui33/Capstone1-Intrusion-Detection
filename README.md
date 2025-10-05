@@ -77,7 +77,7 @@ uvicorn src.inference.app_fastapi:app --reload
 ---
 
 ## 🧩 Repository Structure
-'''
+```
 Capstone1-Intrusion-Detection/
 ├── README.md
 ├── src/
@@ -91,4 +91,4 @@ Capstone1-Intrusion-Detection/
 │   └── KCSE2025_IoT_IDS_Paper_KR.pdf
 ├── images/                       # confusion matrix / training curves
 └── requirements.txt
-'''
+```
