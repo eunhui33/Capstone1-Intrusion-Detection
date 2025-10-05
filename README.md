@@ -1,5 +1,6 @@
 # 🔐 Capstone1 – Intrusion Detection System for IoT Networks (Blockchain + AI)
 
+
 ## 📘 Overview
 This project implements a **dual-layer IoT security application** that integrates:
 1. **Blockchain-based Decentralized Identity (DID)** authentication for secure user access  
@@ -7,6 +8,7 @@ This project implements a **dual-layer IoT security application** that integrate
 
 The system ensures both **identity-level** and **network-level** security for IoT environments.  
 It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model to classify traffic as *normal* or *abnormal*.
++ This dual-architecture enhances IoT resilience against spoofing, unauthorized access, and real-time intrusion attempts.
 
 > 🏆 *Awarded “Best Undergraduate Research Paper” at KCSE 2025*
 
@@ -17,8 +19,8 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 |-----------|------------------|
 | **Language** | Python 3.10 |
 | **AI / ML** | Scikit-learn (MLPClassifier), CatBoost |
-|**EDA & Preprocessing**| Python, Pandas, NumPy, Matplotlib, Seaborn|
-|**Modeling/Serving**| scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn|
+| **EDA / Preprocessing** | Pandas, NumPy, Matplotlib, Seaborn |
+| **Modeling / Deployment** | scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn |
 | **Infrastructure** | CUDA, cuDNN, CICFlowMeter, tcpdump, Wireshark |
 | **Dataset** | CSE-CIC-IDS2018 (Canadian Institute for Cybersecurity) |
 
@@ -30,7 +32,9 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
   → IP to integer encoding, label encoding, normalization, and SMOTE oversampling  
 - Developed **evaluation and visualization module** (confusion matrix, ROC-AUC, MCC, Accuracy)  
 - Implemented **FastAPI backend** to perform real-time packet capture and classification using `CatBoost`  
-- Configured **GPU acceleration (CUDA/cuDNN)** for faster training and inference  
+- Collaborated with three teammates, leading the AI model development and backend integration.
+- Led a 4-member team.
+
 
 ---
 
@@ -65,6 +69,7 @@ python src/training/model_baseline.py
 
 # 5) FastAPI demo (requires CICFlowMeter in PATH)
 uvicorn src.inference.app_fastapi:app --reload
+
 ```
 ---
 
@@ -82,10 +87,10 @@ Capstone1-Intrusion-Detection/
 ├── README.md
 ├── src/
 │ ├── training/
-│ │ ├── model_train.py # MLP training pipeline (main)
-│ │ └── model_baseline.py # initial experiment version
+│ │ ├── model_train.py      # MLP training pipeline (main)
+│ │ └── model_baseline.py   # initial experiment version
 │ ├── inference/
-│ │ └── app_fastapi.py # real-time FastAPI backend
+│ │ └── app_fastapi.py      # real-time FastAPI backend
 ├── paper/
 │   ├── KCSE2025_Best_Undergraduate_Paper_Certificate.pdf
 │   └── KCSE2025_IoT_IDS_Paper_KR.pdf
