@@ -49,30 +49,6 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 
 ---
 
-## 🚀 How to Run (Demo)
-> This repository is for research demonstration. The dataset is not included due to size/licensing.  
-> Artifacts (npy) are generated under `./artifacts/` by `model_train.py`.
-
-```bash
-# 1) Clone
-git clone https://github.com/eunhui33/Capstone1-Intrusion-Detection.git
-cd Capstone1-Intrusion-Detection
-
-# 2) Install
-pip install -r requirements.txt
-
-# 3) Preprocess raw CSVs → save npy (expects CSVs in ./data)
-python src/training/model_train.py
-
-# 4) Baseline training/evaluation (saves images under ./images)
-python src/training/model_baseline.py
-
-# 5) FastAPI demo (requires CICFlowMeter in PATH)
-uvicorn src.inference.app_fastapi:app --reload
-
-```
----
-
 ## 🏅 Recognition & Documents
 - 🥇 *Best Undergraduate Research Paper — KCSE 2025*  
   - **[View Certificate (PDF)](./paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
