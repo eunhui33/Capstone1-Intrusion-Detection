@@ -18,10 +18,13 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 | Category | Tools / Libraries |
 |-----------|------------------|
 | **Language** | Python 3.10 |
-| **AI / ML** | Scikit-learn (MLPClassifier), CatBoost |
-| **EDA / Preprocessing** | Pandas, NumPy, Matplotlib, Seaborn |
-| **Modeling / Deployment** | scikit-learn (MLP), imbalanced-learn (SMOTE), FastAPI, Uvicorn |
-| **Infrastructure** | CUDA, cuDNN, CICFlowMeter, tcpdump, Wireshark |
+| **AI / ML** | scikit-learn (MLP – my implementation), CatBoost (selected for deployment) |
+| **Data Processing** | Pandas, NumPy, imbalanced-learn (SMOTE) |
+| **Packet Capture & Flow Features** | tcpdump, tshark, CICFlowMeter |
+| **Backend / API** | FastAPI, Uvicorn |
+| **Infrastructure / Deployment** | Linux, Naver Cloud Platform (NCP, AWS-equivalent) |
+| **IoT Testbed** | Raspberry Pi |
+| **Visualization & Evaluation** | Matplotlib, Seaborn |
 | **Dataset** | CSE-CIC-IDS2018 (Canadian Institute for Cybersecurity) |
 
 ---
@@ -44,9 +47,8 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 | **MLP (my model)** | 0.9581 | 0.9714 | 0.8740 |
 | CatBoost (team baseline) | 0.9370 | 0.9808 | 0.8240 |
 
-> ✅ The MLP achieved stable detection performance with minimal false positives,  
-> effectively identifying abnormal IoT traffic patterns in real time.
-
+> ✅ We trained both MLP and CatBoost models and selected CatBoost for deployment
+> based on overall reliability and operational suitability for real-time inference.
 ---
 
 ## 🏅 Recognition & Documents
