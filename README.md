@@ -10,7 +10,7 @@ The system ensures both **identity-level** and **network-level** security for Io
 It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model to classify traffic as *normal* or *abnormal*.
 + This dual-architecture enhances IoT resilience against spoofing, unauthorized access, and real-time intrusion attempts.
 
-> 🏆 *Awarded “Best Undergraduate Research Paper” at KCSE 2025*
+> 🏆 *Awarded “Best Undergraduate Research Paper” at KCSE 2025 (Korean Conference on Software Engineering)*
 
 ---
 
@@ -27,13 +27,13 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 ---
 
 ## 💻 My Contributions
-- Built the **MLP training pipeline** with structured logging, early stopping, and real-time performance tracking  
-- Designed **data preprocessing workflow**:  
-  → IP to integer encoding, label encoding, normalization, and SMOTE oversampling  
-- Developed **evaluation and visualization module** (confusion matrix, ROC-AUC, MCC, Accuracy)  
-- Implemented **FastAPI backend** to perform real-time packet capture and classification using `CatBoost`  
-- Collaborated with three teammates, leading the AI model development and backend integration.
-- Led a 4-member team.
+- Designed and implemented the end-to-end AI-based intrusion detection pipeline, focusing on real-time detection and automated response for IoT network traffic.
+- Built and trained an MLP-based intrusion detection model using the CIC-IDS2018 dataset (30K samples), achieving a 93.7% F1-score through careful feature preprocessing, model tuning, and early stopping.
+- Developed the data preprocessing workflow, including IP-to-integer encoding, label encoding, normalization, and SMOTE-based oversampling to address class imbalance in network traffic data.
+- Implemented a real-time packet capture and inference pipeline (tshark → CICFlowMeter → FastAPI) to extract flow-level features and classify live network traffic from remote IoT devices.
+- Designed evaluation and visualization modules to assess model performance, including confusion matrices, ROC-AUC, MCC, and accuracy metrics, enabling systematic validation of detection reliability.
+- Deployed the intrusion prevention system on Naver Cloud Platform (NCP, AWS-equivalent) and validated real-time attack blocking using simulated DDoS and Brute Force scenarios on a Raspberry Pi IoT testbed.
+- Led a 4-member team as project lead, coordinating AI model development, backend integration, milestone delivery, and weekly technical reporting to the faculty advisor.
 
 
 ---
