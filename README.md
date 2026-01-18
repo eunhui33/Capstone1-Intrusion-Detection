@@ -1,4 +1,4 @@
-# 🔐 Capstone1 – Intrusion Detection System for IoT Networks (Blockchain + AI)
+# Capstone1 – Intrusion Detection System for IoT Networks (Blockchain + AI)
 
 
 ## 📘 Overview
