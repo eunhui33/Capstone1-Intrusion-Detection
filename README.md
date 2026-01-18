@@ -50,8 +50,7 @@ It uses the **CIC-IDS2018 dataset** and an **MLP (Multilayer Perceptron)** model
 ---
 
 ## 🏅 Recognition & Documents
--  *Best Undergraduate Research Paper — KCSE 2025*  
-  - **[View Certificate (PDF)](./paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
+-  *Best Undergraduate Research Paper — KCSE 2025* **[View Award (PDF)](./paper/KCSE2025_Best_Undergraduate_Paper_Certificate.pdf)**
 -  Paper (Korean): **[KCSE 2025 IoT IDS Paper (PDF)](./paper/KCSE2025_IoT_IDS_Paper_KR.pdf)**
 
 
